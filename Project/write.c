@@ -16,25 +16,65 @@ void writeToImage(struct buff buffer, char *imageName, int wht)
 	char *ext = strtok(NULL, " ");
 
 	if (wht == 1) {
+
+		int size = buffer.width * buffer.height;
+		int channels = 3;
+
+		double * modifiedWHT = malloc(sizeof(double) * size); 
+		unsigned char* whtimg = malloc(sizeof(unsigned char) * size * channels);
+		memcpy(modifiedWHT, buffer.wht, sizeof(double) * size);
+
+		double maxVal = *(modifiedWHT);
+		double minVal = *(modifiedWHT);
+		for (int i = 0; i < size; i++) {
+			if (*(modifiedWHT + i) > maxVal) {
+				maxVal = *(modifiedWHT + i);
+			}
+
+			if (*(modifiedWHT + i) < minVal) {
+				minVal = *(modifiedWHT + i);
+			}
+		}
+
+		//convert modifiedWHT back to a char array image, scale so values fall in [0,255]
+		
+		for (int i = 0; i < size; i++) {
+			
+			double val = *(modifiedWHT + i);
+			int correction =  (uint8_t)(round(255 * (val - minVal) / (maxVal - minVal)));
+			if (correction > 255) {
+				correction = 255;
+			}
+			else if (correction < 0){
+				correction = 0;
+			}
+			printf("%f\n", *(modifiedWHT + i));
+			printf("%d\n", correction);
+			fflush(stdout);
+			*(whtimg + 3*i) = correction;
+			*(whtimg + (3*i) + 1) = correction;
+			*(whtimg + (3*i) + 2) = correction;
+		}
+
 		if (buffer.name == NULL)
 		{
 			printf(KRED "Error: " RESET "buffer is empty.\n");
 		}
 		else if (strcmp(ext, "png") == 0)
 		{
-			stbi_write_png(strcat(temp, ".png"), buffer.width, buffer.height, buffer.channels, buffer.whtimg, buffer.width * buffer.channels);
+			stbi_write_png(strcat(temp, ".png"), buffer.width, buffer.height, channels, whtimg, buffer.width * channels);
 		}
 		else if (strcmp(ext, "jpg") == 0 || strcmp(ext, "jpeg") == 0)
 		{
-			stbi_write_jpg(strcat(temp, ".jpg"), buffer.width, buffer.height, buffer.channels, buffer.whtimg, buffer.width * buffer.channels);
+			stbi_write_jpg(strcat(temp, ".jpg"), buffer.width, buffer.height, channels, whtimg, buffer.width * channels);
 		}
 		else if (strcmp(ext, "tiff") == 0)
 		{
-			stbi_write_jpg(strcat(temp, ".tiff"), buffer.width, buffer.height, buffer.channels, buffer.whtimg, buffer.width * buffer.channels);
+			stbi_write_jpg(strcat(temp, ".tiff"), buffer.width, buffer.height, channels, whtimg, buffer.width * channels);
 		}
 		else if (strcmp(ext, "gif") == 0)
 		{
-			stbi_write_jpg(strcat(temp, ".gif"), buffer.width, buffer.height, buffer.channels, buffer.whtimg, buffer.width * buffer.channels);
+			stbi_write_jpg(strcat(temp, ".gif"), buffer.width, buffer.height, channels, whtimg, buffer.width * channels);
 		}
 		else if (strcmp(ext, "wht") == 0)
 		{
@@ -44,6 +84,10 @@ void writeToImage(struct buff buffer, char *imageName, int wht)
 		{
 			printf(KRED "Error: " RESET "File type not supported yet.\n\n");
 		}
+
+
+		free(modifiedWHT);
+		free(whtimg);
 	}
 	else if (buffer.isLibgd > 0)
 	{
