@@ -1,0 +1,4 @@
+var searchData=
+[
+  ['reset_0',['RESET',['../app_8c.html#ab702106cf3b3e96750b6845ded4e0299',1,'RESET():&#160;app.c'],['../arithmetics_8c.html#ab702106cf3b3e96750b6845ded4e0299',1,'RESET():&#160;arithmetics.c'],['../blurr_8c.html#ab702106cf3b3e96750b6845ded4e0299',1,'RESET():&#160;blurr.c'],['../brighten_8c.html#ab702106cf3b3e96750b6845ded4e0299',1,'RESET():&#160;brighten.c'],['../grayscale_8c.html#ab702106cf3b3e96750b6845ded4e0299',1,'RESET():&#160;grayscale.c'],['../read_8c.html#ab702106cf3b3e96750b6845ded4e0299',1,'RESET():&#160;read.c'],['../rotation_8c.html#ab702106cf3b3e96750b6845ded4e0299',1,'RESET():&#160;rotation.c'],['../sharpen_8c.html#ab702106cf3b3e96750b6845ded4e0299',1,'RESET():&#160;sharpen.c'],['../wht_8c.html#ab702106cf3b3e96750b6845ded4e0299',1,'RESET():&#160;wht.c'],['../write_8c.html#ab702106cf3b3e96750b6845ded4e0299',1,'RESET():&#160;write.c']]]
+];
