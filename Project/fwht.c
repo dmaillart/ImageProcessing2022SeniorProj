@@ -14,6 +14,16 @@
 
 void fwht_transform(int n, const int *src, int *dst);
 
+
+/** 
+ * The fast walsh-hadamard transform computes the walsh-hadamard transform with in O(nlogn).
+ * This function prepares the rows and columns to pass to another function, fwht_transform,
+ * which computes the transform.
+ * \param buffer the buffer which contains the image going to get transformed
+ * \param bufname the name of the buffer which contains the image going to get transformed
+ * 
+ * \return buff of the transformed image
+ */
 struct buff fwht(struct buff buffer, char* buffname){
     // printf("Hellow World!\n");
     struct buff result;
@@ -117,6 +127,12 @@ struct buff fwht(struct buff buffer, char* buffname){
     return result;
 }
 
+/** 
+ * This function takes in a 
+ * \param n this is the dimension of the square image matrix
+ * \param src an array of values from a row of the original image which will be transformed
+ * \param dst the row array of the results of the transform
+ */
 void fwht_transform(int n, const int *src, int *dst)
 {
     int adata[n];
@@ -139,12 +155,23 @@ void fwht_transform(int n, const int *src, int *dst)
     memcpy(dst, a, sizeof(int)*n);
 }
 
+/** 
+ * This function does a basic normalization over values in an int array 
+ * \param n this is the value to divide everything by
+ * \param src this is the array of values to be normalized
+ */
 void fwht_normalize(int n, int *src)
 {
     int i;
     for (i = 0; i < n; i++) src[i] /= n;
 }
 
+/** 
+ * This function calculates an average of absolute differences over two arrays.
+ * \param n this is the length of the two arrays
+ * \param a this is the first int array
+ * \param a this is the second int array
+ */
 double fwht_sum_absolute_difference(int n, int *a, int *b)
 {
     long sum = 0;
