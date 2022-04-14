@@ -4,4 +4,4 @@ set autoscale yfix
 set autoscale cbfix
 set palette gray positive
 set yrange [:] reverse
-plot 'origImg.dat' matrix with image notitle
+plot './GNUPlot/transformedImg.dat' matrix with image notitle

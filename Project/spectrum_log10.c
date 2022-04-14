@@ -13,7 +13,7 @@
 #define KMAG  "\x1B[35m" ///< Magenta terminal text color
 #define RESET "\x1B[0m"  ///< Reset terminal text color to default
 
-struct buff spectrum(struct buff buffer) {
+struct buff spectrum_log10(struct buff buffer) {
 
 	// put data into origImg.dat
 	FILE *origImgFP;
@@ -40,13 +40,23 @@ struct buff spectrum(struct buff buffer) {
 	fclose(origImgFP);
 
 
-	// put data into transdormedImage.dat
+	// put data into transdormedImage.dat, this uses a symettric log scaling of with linear function in the middle
 	FILE *transformedImgFP;
 	transformedImgFP = fopen("./GNUPlot/transformedImg.dat", "w");
 	for (row = 0; row < buffer.height; row++ ){
 
 		for(col = 0; col < buffer.width; col++ ) {
-			fprintf(transformedImgFP, "%f\t", buffer.wht[(row*buffer.width) + col]);
+			double epsilon = 0;
+			double val = buffer.wht[(row*buffer.width) + col];
+			if (val < -0.4343){
+				fprintf(transformedImgFP, "%f\t", -1.0 * log10(-1.0 * val) - 0.796510179);
+			}
+			else if (val > 0.4343){
+				fprintf(transformedImgFP, "%f\t", log10(val) + 0.796510179);
+			}
+			else{
+				fprintf(transformedImgFP, "%f\t", val);
+			}
 		}
 		fprintf(transformedImgFP, "\n");
 	}

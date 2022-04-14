@@ -44,6 +44,7 @@ struct template
 #include "sharpen.c"
 #include "grayscale.c" //included in wht.c already
 #include "spectrum.c"
+#include "spectrum_log10.c"
 #include "wht.c"		 //included in read.c already
 #include "fwht.c"
 
@@ -588,8 +589,23 @@ int main(int argc, char **argv)
 			}
 
 			spectrum(temp);
-			int status1 = system("gnuplot -p origImgPlot.gp");
-			int status2 = system("gnuplot -p transformedImgPlot.gp");
+			
+		}
+		else if ((strcmp(command, "spectrum_log10") == 0)) {
+
+			if (spaceCount != 1) {
+				printf(KRED "Error: " RESET "Incorrect syntax on spectrum command.\n       Use the syntax: spectrum <buffer>\n");
+				p[0] = '\0';
+				continue;
+			}
+			imageName = strtok(NULL, " ");
+			struct buff temp = buffSearch(imageName, buffers, buffCount);
+			if (temp.has_wht == 0){
+				printf(KRED "Error: this buffer does not contain wht data\n");
+				continue;
+			}
+
+			spectrum_log10(temp);
 		}
 		
 		else if ((strcmp(command, "fwht") == 0)) {
