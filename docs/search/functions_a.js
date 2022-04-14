@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['sharpen_120',['sharpen',['../sharpen_8c.html#a60c360cb44309c7c9937a73f260f4b5a',1,'sharpen.c']]],
-  ['subtract_121',['subtract',['../arithmetics_8c.html#a4c0c320fa197c11cdd2fa89bbfd3c96a',1,'arithmetics.c']]]
+  ['readtobuff_134',['readToBuff',['../read_8c.html#a290d3680cd4c87696f105a80ab3e0af5',1,'read.c']]],
+  ['rotate_135',['rotate',['../rotation_8c.html#a87100b0f8584cf8e36f55cc117caca43',1,'rotation.c']]]
 ];

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['get_5ffilename_5fext_23',['get_filename_ext',['../app_8c.html#a0d6792f91e44d50ed1b25bb34ee86db5',1,'app.c']]],
-  ['grayscale_24',['grayscale',['../grayscale_8c.html#ac537b9b42808d84c6aea2c43d81ff134',1,'grayscale.c']]],
-  ['grayscale_2ec_25',['grayscale.c',['../grayscale_8c.html',1,'']]]
+  ['fwht_27',['fwht',['../fwht_8c.html#a8c757e9ae6bf91169733be11c1b8eab7',1,'fwht.c']]],
+  ['fwht_2ec_28',['fwht.c',['../fwht_8c.html',1,'']]],
+  ['fwht_5ftransform_29',['fwht_transform',['../fwht_8c.html#a54fcb1c614498833d1e19046df3d88ab',1,'fwht.c']]]
 ];

@@ -1,10 +1,6 @@
 var searchData=
 [
-  ['hadamard_26',['hadamard',['../wht_8c.html#ac082360e9bd85524d3d3159e819eb9c8',1,'wht.c']]],
-  ['hadamard_5frecursive_27',['hadamard_recursive',['../wht_8c.html#a1399cf06535950b955b1dc3e8f14eb2b',1,'wht.c']]],
-  ['has_5fwht_28',['has_wht',['../structbuff.html#a1f76028e524d6723fb71de13b6200cc0',1,'buff']]],
-  ['height_29',['height',['../structbuff.html#ab528c12d04fbb6108dc3e743f91fb396',1,'buff']]],
-  ['histoeq_2ec_30',['histoEQ.c',['../histoEQ_8c.html',1,'']]],
-  ['histogramequalization_31',['histogramEqualization',['../histoEQ_8c.html#a7c68f95c81e7b1307ee699ac0e06f380',1,'histoEQ.c']]],
-  ['horizontalflip_32',['horizontalFlip',['../rotation_8c.html#aefd2617e4ccf96126846818fb6a992b4',1,'rotation.c']]]
+  ['get_5ffilename_5fext_30',['get_filename_ext',['../app_8c.html#a0d6792f91e44d50ed1b25bb34ee86db5',1,'app.c']]],
+  ['grayscale_31',['grayscale',['../grayscale_8c.html#ac537b9b42808d84c6aea2c43d81ff134',1,'grayscale.c']]],
+  ['grayscale_2ec_32',['grayscale.c',['../grayscale_8c.html',1,'']]]
 ];

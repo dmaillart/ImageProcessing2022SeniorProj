@@ -1,8 +1,4 @@
 var searchData=
 [
-  ['print_5fmatrix_47',['print_matrix',['../wht_8c.html#a89b2abb9fceaff52c310125088c8394f',1,'wht.c']]],
-  ['print_5fmatrixf_48',['print_matrixf',['../wht_8c.html#afa302cedef43c00eeb9a9c002f36872f',1,'wht.c']]],
-  ['print_5fmatrixu_49',['print_matrixu',['../wht_8c.html#af8a3989ade1cebcdde7398997d542419',1,'wht.c']]],
-  ['printbuffer_50',['printBuffer',['../app_8c.html#a790425ec9e1daa1f614f54b46c18ec1e',1,'app.c']]],
-  ['printmenu_51',['printMenu',['../app_8c.html#ab13e858612c64eeef73aff1d8a03945e',1,'app.c']]]
+  ['name_54',['name',['../structbuff.html#aeb8aac78d6e377b028730c495a0d3767',1,'buff::name()'],['../structtemplate.html#a056071b99d3a4d6a124e6525ddf98d2c',1,'template::name()']]]
 ];

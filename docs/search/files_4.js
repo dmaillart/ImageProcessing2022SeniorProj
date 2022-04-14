@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['grayscale_2ec_84',['grayscale.c',['../grayscale_8c.html',1,'']]]
+  ['fwht_2ec_93',['fwht.c',['../fwht_8c.html',1,'']]]
 ];

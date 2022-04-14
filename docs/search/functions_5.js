@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['hadamard_107',['hadamard',['../wht_8c.html#ac082360e9bd85524d3d3159e819eb9c8',1,'wht.c']]],
-  ['hadamard_5frecursive_108',['hadamard_recursive',['../wht_8c.html#a1399cf06535950b955b1dc3e8f14eb2b',1,'wht.c']]],
-  ['histogramequalization_109',['histogramEqualization',['../histoEQ_8c.html#a7c68f95c81e7b1307ee699ac0e06f380',1,'histoEQ.c']]],
-  ['horizontalflip_110',['horizontalFlip',['../rotation_8c.html#aefd2617e4ccf96126846818fb6a992b4',1,'rotation.c']]]
+  ['get_5ffilename_5fext_120',['get_filename_ext',['../app_8c.html#a0d6792f91e44d50ed1b25bb34ee86db5',1,'app.c']]],
+  ['grayscale_121',['grayscale',['../grayscale_8c.html#ac537b9b42808d84c6aea2c43d81ff134',1,'grayscale.c']]]
 ];

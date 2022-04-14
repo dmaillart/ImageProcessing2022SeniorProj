@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['multiply_112',['multiply',['../arithmetics_8c.html#aed1b55c0a3c073efca8e8b0cb5ed4809',1,'arithmetics.c']]]
+  ['ifwht_126',['ifwht',['../fwht_8c.html#a20f084f0373dce0e647a33d4e6f4583a',1,'fwht.c']]],
+  ['iwht_127',['iwht',['../wht_8c.html#ae35ae4f80914ba5b64232a1979627b74',1,'wht.c']]]
 ];
