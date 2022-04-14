@@ -138,7 +138,7 @@ struct buff fwht(struct buff buffer, char* buffname){
 		else {
 			//printf("%f\n", *(temp2 + i));
 			*(img.img + i) = (uint8_t)(round(*(img.wht + i)));
-		}*/
+		}
 	}
 	// printf("MAX: %d\n", max);
 	// printf("MIN: %d\n", min);
