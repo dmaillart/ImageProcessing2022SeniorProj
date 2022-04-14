@@ -229,9 +229,9 @@ struct buff wht(struct buff buffer, char* buffname) {
 	print_matrixu(result.img, dim);
 	printf("\n");
 	print_matrixf(result.wht, dim);
-	printf("\n");
+	printf("\n"); 
 	print_matrixf(temp, dim);
-	printf("\n");*/
+	printf("\n"); */
 	// Free the old wht that we just transformed, and assign it to the temp where we stored the finished transform
 	free(result.wht);
 	result.wht = temp;

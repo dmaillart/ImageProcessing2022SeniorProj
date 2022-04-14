@@ -43,6 +43,7 @@ struct template
 #include "blurr.c"
 #include "sharpen.c"
 #include "grayscale.c" //included in wht.c already
+#include "spectrum.c"
 #include "wht.c"		 //included in read.c already
 #include "fwht.c"
 
@@ -559,7 +560,7 @@ int main(int argc, char **argv)
 				printf("\n");
 			}
 		}
-		else if ((strcmp(command, "wht") == 0)) {
+		else if ((strcmp(command, "wht") == 0)) {  
 			if (spaceCount != 3) {
 				printf(KRED "Error: " RESET "Incorrect syntax on wht command.\n       Use the syntax: wht <buffer> into <new buffer>\n");
 				p[0] = '\0';
@@ -572,6 +573,25 @@ int main(int argc, char **argv)
 			whtHistEQ(&temp);
 			addBuffer(temp, buffers, &buffCount);
 		}
+		else if ((strcmp(command, "spectrum") == 0)) {
+
+			if (spaceCount != 1) {
+				printf(KRED "Error: " RESET "Incorrect syntax on spectrum command.\n       Use the syntax: spectrum <buffer>\n");
+				p[0] = '\0';
+				continue;
+			}
+			imageName = strtok(NULL, " ");
+			struct buff temp = buffSearch(imageName, buffers, buffCount);
+			if (temp.has_wht == 0){
+				printf(KRED "Error: this buffer does not contain wht data\n");
+				continue;
+			}
+
+			spectrum(temp);
+			int status1 = system("gnuplot -p origImgPlot.gp");
+			int status2 = system("gnuplot -p transformedImgPlot.gp");
+		}
+		
 		else if ((strcmp(command, "fwht") == 0)) {
 			if (spaceCount != 3) {
 				printf(KRED "Error: " RESET "Incorrect syntax on fwht command.\n       Use the syntax: fwht <buffer> into <new buffer>\n");
