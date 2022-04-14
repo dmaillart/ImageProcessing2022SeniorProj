@@ -18,7 +18,12 @@
  * \param dst `int[]` that will store the transformed data
  */
 void fwht_transform(int n, const int *src, int *dst);
-
+/**
+ * Helper function for Fast Walsh-Hadamard Transform
+ * \param n the length of one side of the padded n by n image in pixels
+ * \param src `double[]` containing the data to be transformed
+ * \param dst `double[]` that will store the transformed data
+ */
 void dbl_fwht_transform(int n, const double *src, double *dst);
 /**
  * Performs a Fast Walsh-Hadamard Transform on an input `buff` and returns the output image as a `buff`.
@@ -196,7 +201,12 @@ struct buff fwht(struct buff buffer, char* buffname){
 	}
     return result;
 }
-
+/**
+ * Inverse function for Fast Walsh-Hadamard Transform
+ * \param img `buff` containing the image to be inversely transformed
+ * 
+ * \return `buff` containing inverse FWHT image
+ */
 struct buff ifwht(struct buff img) {
 	// Inverse FWHT transform, takes an wft image as input and recovers the original image from it.
 	// To invert, run the normal transform in reverse, i.e. transform rows then columns
