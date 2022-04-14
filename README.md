@@ -13,12 +13,12 @@ Pull the project from this repository.
 ### Step 2:
 Navigate into the project folder
 
-    $ cd ../SeniorProjectCSquad/Project
+    $ cd ../ImageProcessing2022SeniorProj/Project
 ### Step 3:
 To install the dependencies run these commands 
 
-    $ sudo apt-get install libgtk2.0-dev
     $ sudo apt-get update -y
+    $ sudo apt-get install libgtk2.0-dev
     $ sudo apt-get install -y libgd-dev
 
 Now the application is ready to run.
