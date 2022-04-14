@@ -80,9 +80,6 @@ To run the program, use the commands
     convolve3x3 <template> <buffer-name>
 * template in this case is a 3x3 array and the input must be in the form \[a b c\]\[d e f\]\[g h i\] where a,...,i are any rational numbers
 
-### Padding to nearest 2^n
-
-    pad <buffer> into <new-buffer-name>
 ### Define Template
 
     define_template <template-name> <template-structure> = <(x,y)>
@@ -92,3 +89,23 @@ To run the program, use the commands
 ### Templated Convolution
 
     convolve_template <buff-name> <template-name>
+    
+### Hadamard Transform(WHT)
+
+    wht <buffer-name> into <new-buffer-name>
+* buffer-name = name of a buffer created with the read function or other functions that output buffers
+* new-buffer-name = name of the buffer to be created as ouput (can overwrite buffer-name)
+### Display WHT image
+
+    display_wht <buffer-name>
+* buffer-name = name of the buffer to be displayed as an image
+### Output WHT image to file
+
+    write_wht <file-name> into <new-image-name>
+* file-name = name of a buffer containing a Walsh-Hadamard transformed image
+* new-image-name = name of the image file to be created as output
+### Fast Walsh-Hadamard Transform (FWHT)
+
+    fwht <buffer-name> into <new-buffer-name>
+* buffer-name = name of a buffer created with the read function or other functions that output buffers
+* new-buffer-name = name of the buffer to be created as ouput (can overwrite buffer-name)
