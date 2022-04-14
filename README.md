@@ -19,6 +19,7 @@ To install the dependencies run these commands
 
     $ sudo apt-get install libgtk2.0-dev
     $ sudo apt-get update -y
+    $ sudo apt-get install gnuplot
     $ sudo apt-get install -y libgd-dev
 
 Now the application is ready to run.

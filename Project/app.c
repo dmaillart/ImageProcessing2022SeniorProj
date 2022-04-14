@@ -679,6 +679,8 @@ void printMenu()
 	printf(KBLU "Grayscale: " RESET "\"grayscale <buffer-name> into <new-buuffer-name>\"\n");
 	printf("\n");
 	printf(KBLU "Hadamard Transform (WHT): " RESET "\"wht <buffer-name> into <new-buffer-name>\"\n");
+	printf(KBLU "Spectrum: " RESET "\"spectrum <buffer-name>\"\n");
+	printf(KBLU "Spectrum with log10 Scaling: " RESET "\"spectrum_log10 <buffer-name>\"\n");
 	printf(KBLU "Display WHT image: " RESET "\"display_wht <buffer-name>\"\n");
 	printf(KBLU "Output WHT image to file: " RESET "\"write_wht <file-name> into <new-image-name>\"\n");
 	printf(KBLU "Fast Walsh-Hadamard Transform (FWHT): " RESET "\"fwht <buffer-name> into <new-buffer-name>\"\n");
